@@ -14,7 +14,9 @@
 		F0C9A7172558955E00234F94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0C9A7162558955E00234F94 /* Assets.xcassets */; };
 		F0C9A71A2558955E00234F94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0C9A7182558955E00234F94 /* LaunchScreen.storyboard */; };
 		F0C9A7242558989F00234F94 /* MapProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C9A7232558989F00234F94 /* MapProvider.swift */; };
-		F0C9A72925589C8E00234F94 /* MKMapKi+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C9A72825589C8E00234F94 /* MKMapKi+Ext.swift */; };
+		F0C9A72925589C8E00234F94 /* MKMapKi+MapProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C9A72825589C8E00234F94 /* MKMapKi+MapProvider.swift */; };
+		F0C9A72B25589FF200234F94 /* RouteInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C9A72A25589FF200234F94 /* RouteInputView.swift */; };
+		F0C9A72D2558A55700234F94 /* MainMapView+RouteInputViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C9A72C2558A55700234F94 /* MainMapView+RouteInputViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +31,9 @@
 		F0C9A7192558955E00234F94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0C9A71B2558955E00234F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0C9A7232558989F00234F94 /* MapProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapProvider.swift; sourceTree = "<group>"; };
-		F0C9A72825589C8E00234F94 /* MKMapKi+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapKi+Ext.swift"; sourceTree = "<group>"; };
+		F0C9A72825589C8E00234F94 /* MKMapKi+MapProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapKi+MapProvider.swift"; sourceTree = "<group>"; };
+		F0C9A72A25589FF200234F94 /* RouteInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteInputView.swift; sourceTree = "<group>"; };
+		F0C9A72C2558A55700234F94 /* MainMapView+RouteInputViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainMapView+RouteInputViewDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				F0C9A7112558955D00234F94 /* MainMapView.swift */,
+				F0C9A72A25589FF200234F94 /* RouteInputView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -129,7 +134,8 @@
 		F0C9A72725589A8A00234F94 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F0C9A72825589C8E00234F94 /* MKMapKi+Ext.swift */,
+				F0C9A72825589C8E00234F94 /* MKMapKi+MapProvider.swift */,
+				F0C9A72C2558A55700234F94 /* MainMapView+RouteInputViewDelegate.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -250,8 +256,10 @@
 			files = (
 				F0C9A7122558955D00234F94 /* MainMapView.swift in Sources */,
 				F0C9A7242558989F00234F94 /* MapProvider.swift in Sources */,
-				F0C9A72925589C8E00234F94 /* MKMapKi+Ext.swift in Sources */,
+				F0C9A72925589C8E00234F94 /* MKMapKi+MapProvider.swift in Sources */,
+				F0C9A72B25589FF200234F94 /* RouteInputView.swift in Sources */,
 				F0C9A70E2558955D00234F94 /* AppDelegate.swift in Sources */,
+				F0C9A72D2558A55700234F94 /* MainMapView+RouteInputViewDelegate.swift in Sources */,
 				F0C9A7102558955D00234F94 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

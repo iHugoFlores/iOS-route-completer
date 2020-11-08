@@ -13,6 +13,11 @@ class MainMapView: UIViewController {
     
     private let mapView: MapProvider!
     
+    private lazy var encodedRouteInput: RouteInputView = {
+        let view = RouteInputView(viewDelegate: self)
+        return view
+    }()
+    
     init(mapView: MapProvider) {
         self.mapView = mapView
         super.init(nibName: nil, bundle: nil)
@@ -29,5 +34,10 @@ class MainMapView: UIViewController {
     private func setUpLayout() {
         view.addSubview(mapView)
         mapView.snp.makeConstraints { $0.edges.equalToSuperview() }
+        
+        view.addSubview(encodedRouteInput)
+        encodedRouteInput.snp.makeConstraints {
+            $0.top.left.right.equalToSuperview().inset(40)
+        }
     }
 }
