@@ -3,16 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		6E9879FFF5706BC49456B4A8 /* Pods_iOS_route_filler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C630C5177DF926DB22BD6E4 /* Pods_iOS_route_filler.framework */; };
 		F0C9A70E2558955D00234F94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C9A70D2558955D00234F94 /* AppDelegate.swift */; };
 		F0C9A7102558955D00234F94 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C9A70F2558955D00234F94 /* SceneDelegate.swift */; };
-		F0C9A7122558955D00234F94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C9A7112558955D00234F94 /* ViewController.swift */; };
+		F0C9A7122558955D00234F94 /* MainMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C9A7112558955D00234F94 /* MainMapView.swift */; };
 		F0C9A7172558955E00234F94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0C9A7162558955E00234F94 /* Assets.xcassets */; };
 		F0C9A71A2558955E00234F94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0C9A7182558955E00234F94 /* LaunchScreen.storyboard */; };
+		F0C9A7242558989F00234F94 /* MapProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C9A7232558989F00234F94 /* MapProvider.swift */; };
+		F0C9A72925589C8E00234F94 /* MKMapKi+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C9A72825589C8E00234F94 /* MKMapKi+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,10 +24,12 @@
 		F0C9A70A2558955D00234F94 /* iOS-route-filler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-route-filler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0C9A70D2558955D00234F94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0C9A70F2558955D00234F94 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F0C9A7112558955D00234F94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F0C9A7112558955D00234F94 /* MainMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMapView.swift; sourceTree = "<group>"; };
 		F0C9A7162558955E00234F94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0C9A7192558955E00234F94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0C9A71B2558955E00234F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0C9A7232558989F00234F94 /* MapProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapProvider.swift; sourceTree = "<group>"; };
+		F0C9A72825589C8E00234F94 /* MKMapKi+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapKi+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +58,6 @@
 				26D0B6CA696BB1AC1D0710D2 /* Pods-iOS-route-filler.debug.xcconfig */,
 				D32BB5A444731EF718F730E2 /* Pods-iOS-route-filler.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -79,14 +82,56 @@
 		F0C9A70C2558955D00234F94 /* iOS-route-filler */ = {
 			isa = PBXGroup;
 			children = (
+				F0C9A72725589A8A00234F94 /* extensions */,
+				F0C9A72625589A4E00234F94 /* models */,
+				F0C9A72525589A4400234F94 /* view-models */,
+				F0C9A7222558986E00234F94 /* views */,
+				F0C9A7212558986300234F94 /* protocols */,
 				F0C9A70D2558955D00234F94 /* AppDelegate.swift */,
 				F0C9A70F2558955D00234F94 /* SceneDelegate.swift */,
-				F0C9A7112558955D00234F94 /* ViewController.swift */,
 				F0C9A7162558955E00234F94 /* Assets.xcassets */,
 				F0C9A7182558955E00234F94 /* LaunchScreen.storyboard */,
 				F0C9A71B2558955E00234F94 /* Info.plist */,
 			);
 			path = "iOS-route-filler";
+			sourceTree = "<group>";
+		};
+		F0C9A7212558986300234F94 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F0C9A7232558989F00234F94 /* MapProvider.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		F0C9A7222558986E00234F94 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				F0C9A7112558955D00234F94 /* MainMapView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		F0C9A72525589A4400234F94 /* view-models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "view-models";
+			sourceTree = "<group>";
+		};
+		F0C9A72625589A4E00234F94 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		F0C9A72725589A8A00234F94 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F0C9A72825589C8E00234F94 /* MKMapKi+Ext.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,7 +248,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0C9A7122558955D00234F94 /* ViewController.swift in Sources */,
+				F0C9A7122558955D00234F94 /* MainMapView.swift in Sources */,
+				F0C9A7242558989F00234F94 /* MapProvider.swift in Sources */,
+				F0C9A72925589C8E00234F94 /* MKMapKi+Ext.swift in Sources */,
 				F0C9A70E2558955D00234F94 /* AppDelegate.swift in Sources */,
 				F0C9A7102558955D00234F94 /* SceneDelegate.swift in Sources */,
 			);
